@@ -1,6 +1,6 @@
-package com.github.mbonisimpala.movie_shop.entity;
+package com.github.mbonisimpala.movieshop.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 @NoArgsConstructor
@@ -9,8 +9,8 @@ import lombok.*;
 @Setter
 
 @Entity
-@Table(name = "wishlist")
-public class WishList {
+@Table(name = "course")
+public class Cart {
 
     @Id
     @Column(name = "id")
@@ -24,4 +24,5 @@ public class WishList {
     @NonNull
     @Column(name = "movie_id", nullable = false)
     private long movieId;
+
 }

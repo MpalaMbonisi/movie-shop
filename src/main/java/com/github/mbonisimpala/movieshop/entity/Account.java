@@ -1,7 +1,7 @@
-package com.github.mbonisimpala.movie_shop.entity;
-
-import jakarta.persistence.*;
+package com.github.mbonisimpala.movieshop.entity;
 import lombok.*;
+
+import javax.persistence.*;
 
 @NoArgsConstructor
 @RequiredArgsConstructor
@@ -9,8 +9,8 @@ import lombok.*;
 @Setter
 
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "account")
+public class Account {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,4 +1,4 @@
-package com.github.mbonisimpala.movie_shop;
+package com.github.mbonisimpala.movieshop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
