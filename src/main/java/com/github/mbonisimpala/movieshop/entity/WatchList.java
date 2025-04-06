@@ -9,8 +9,8 @@ import lombok.*;
 @Setter
 
 @Entity
-@Table(name = "wishlist")
-public class WishList {
+@Table(name = "watchlist")
+public class WatchList {
 
     @Id
     @Column(name = "id")
