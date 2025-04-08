@@ -1,7 +1,10 @@
 package com.github.mbonisimpala.movieshop.repository;
 
-import com.github.mbonisimpala.movieshop.entity.Cart;
+import com.github.mbonisimpala.movieshop.entity.CartItem;
 import org.springframework.data.repository.CrudRepository;
 
-public interface CartRepository extends CrudRepository<Cart, Long> {
+import java.util.List;
+
+public interface CartRepository extends CrudRepository<CartItem, Long> {
+    List<CartItem> findByAccountId(Long accountId);
 }
