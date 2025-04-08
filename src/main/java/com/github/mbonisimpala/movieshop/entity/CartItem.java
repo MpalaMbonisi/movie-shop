@@ -4,25 +4,25 @@ import javax.persistence.*;
 import lombok.*;
 
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 
 @Entity
 @Table(name = "course")
-public class Cart {
+public class CartItem {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NonNull
-    @Column(name = "user_id", nullable = false)
-    private long userId;
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
 
-    @NonNull
-    @Column(name = "movie_id", nullable = false)
-    private long movieId;
+    @ManyToOne
+    @JoinColumn(name = "movie_id")
+    private Movie movie;
 
 }

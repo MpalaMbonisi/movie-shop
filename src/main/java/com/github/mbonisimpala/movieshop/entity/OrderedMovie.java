@@ -3,9 +3,10 @@ package com.github.mbonisimpala.movieshop.entity;
 import javax.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 
@@ -17,16 +18,15 @@ public class OrderedMovie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NonNull
-    @Column(name = "user_id", nullable = false)
-    private long userId;
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
 
-    @NonNull
-    @Column(name = "movie_id", nullable = false)
-    private long movieId;
+    @ManyToOne
+    @JoinColumn(name = "movie_id")
+    private Movie movie;
 
-    @NonNull
     @Column(name = "purchase_date", nullable = false)
-    private LocalDate purchaseDate;
+    private LocalDateTime purchaseDate;
 
 }
