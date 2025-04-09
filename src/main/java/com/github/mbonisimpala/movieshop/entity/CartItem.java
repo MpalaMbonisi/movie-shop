@@ -4,12 +4,12 @@ import javax.persistence.*;
 import lombok.*;
 
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
 
 @Entity
-@Table(name = "course")
+@Table(name = "cart")
 public class CartItem {
 
     @Id
@@ -17,10 +17,12 @@ public class CartItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NonNull
     @ManyToOne
     @JoinColumn(name = "account_id")
     private Account account;
 
+    @NonNull
     @ManyToOne
     @JoinColumn(name = "movie_id")
     private Movie movie;
