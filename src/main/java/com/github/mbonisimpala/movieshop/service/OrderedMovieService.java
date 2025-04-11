@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface OrderedMovieService {
     List<OrderedMovie> getAllOrderedMovies(long accountId);
-    OrderedMovie saveOrderedMovie(OrderedMovie orderedMovie, long accountId, long movieId);
+    OrderedMovie saveOrderedMovie(long accountId, long movieId);
 }

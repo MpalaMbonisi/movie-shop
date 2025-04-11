@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "7b91f216-882a-4db2-a930-72c588921730",
+		"name": "movie-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42403492"
+	},
+	"item": [
+		{
+			"name": "Good Requests",
+			"item": [
+				{
+					"name": "Movie",
+					"item": [
+						{
+							"name": "Get All Movies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8080/movie/all"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Movie By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8080/movie/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "Get Account By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8080/account/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Account By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:8080/account/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Save Account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mbonisimpala63@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/account"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "Save Cart Item",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "localhost:8080/cart/account/1/movie/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Cart Item",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:8080/cart/account/1/movie/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Cart Items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8080/cart/account/1/all"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "WatchList",
+					"item": [
+						{
+							"name": "Get All Movies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8080/watchlist/account/1/all"
+							},
+							"response": []
+						},
+						{
+							"name": "Add Movie",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "localhost:8080/watchlist/account/1/movie/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Movie",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:8080/watchlist/account/1/movie/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "My Movie List",
+					"item": [
+						{
+							"name": "Save Movie",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "localhost:8080/mylist/account/1/movie/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Get All My Movies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8080/mylist/account/1/all"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

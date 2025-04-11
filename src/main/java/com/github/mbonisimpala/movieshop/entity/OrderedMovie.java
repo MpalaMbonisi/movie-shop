@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
 
@@ -18,14 +18,17 @@ public class OrderedMovie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NonNull
     @ManyToOne
     @JoinColumn(name = "account_id")
     private Account account;
 
+    @NonNull
     @ManyToOne
     @JoinColumn(name = "movie_id")
     private Movie movie;
 
+    @NonNull
     @Column(name = "purchase_date", nullable = false)
     private LocalDateTime purchaseDate;
 
