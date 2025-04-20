@@ -16,7 +16,7 @@ public class CartController {
     @Autowired
     CartService cartService;
 
-    @GetMapping("/account/{id}")
+    @GetMapping("/account/{accountId}")
     public ResponseEntity<List<CartItem>> getAllCartIterms(@PathVariable Long accountId){
         return new ResponseEntity<>(cartService.getAllCartItems(accountId), HttpStatus.OK);
     }
@@ -32,8 +32,9 @@ public class CartController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping("/account/{id}/all")
-    public ResponseEntity<List<CartItem>> getAllCartItems(@PathVariable Long id){
-        return new ResponseEntity<>(cartService.getAllCartItems(id), HttpStatus.OK);
+    @DeleteMapping("/account/{accountId}/clear")
+    public ResponseEntity<HttpStatus> deleteAllCartItems(@PathVariable Long accountId){
+        cartService.deleteAllCartItems(accountId);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

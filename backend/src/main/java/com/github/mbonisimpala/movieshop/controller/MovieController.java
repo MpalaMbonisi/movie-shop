@@ -21,8 +21,13 @@ public class MovieController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Movie>> saveMovie(){
+    public ResponseEntity<List<Movie>> getAllMovies(){
         return new ResponseEntity<>(movieService.getAllMovies(), HttpStatus.OK);
+    }
+
+    @GetMapping("/genre/{id}")
+    public ResponseEntity<List<Movie>> getAllMoviesByGenre(@PathVariable Long id){
+        return new ResponseEntity<>(movieService.getAllMoviesByGenre(id), HttpStatus.OK);
     }
 
 }
