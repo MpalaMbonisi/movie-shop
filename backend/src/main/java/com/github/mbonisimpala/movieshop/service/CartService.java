@@ -9,4 +9,5 @@ public interface CartService {
     List<CartItem> getAllCartItems(long accountId);
     void deleteCartItem(long accountId, long movieId);
     CartItem saveCartItem(long accountId, long movieId);
+    void deleteAllCartItems(long accountId);
 }

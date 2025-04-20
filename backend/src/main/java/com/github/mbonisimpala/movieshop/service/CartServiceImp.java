@@ -38,4 +38,9 @@ public class CartServiceImp implements CartService {
     public void deleteCartItem(long accountId, long movieId) {
         cartRepository.deleteByAccountIdAndMovieId(accountId, movieId);
     }
+
+    @Override
+    public void deleteAllCartItems(long accountId) {
+        cartRepository.deleteByAccountId(accountId);
+    }
 }
