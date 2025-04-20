@@ -10,4 +10,6 @@ public interface CartRepository extends CrudRepository<CartItem, Long> {
     List<CartItem> findByAccountId(Long accountId);
     @Transactional
     void deleteByAccountIdAndMovieId(Long accountId, Long movieId);
+    @Transactional
+    void deleteByAccountId(Long accountId);
 }
