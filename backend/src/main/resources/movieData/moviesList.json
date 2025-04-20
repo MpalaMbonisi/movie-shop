@@ -1,0 +1,321 @@
+[
+  {
+    "Title": "Don't Look Up",
+    "Year": "2021",
+    "Price" : "21.50",
+    "Runtime": "138 min",
+    "Genre": 1,
+    "Actors": "Leonardo DiCaprio, Jennifer Lawrence, Meryl Streep",
+    "Plot": "Two low-level astronomers must go on a giant media tour to warn humankind of an approaching comet that will destroy planet Earth.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=RbIxYm3mKzI",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjhhNWFjNzctYTJjOS00MDc0LThiNjItZmM0ZDVmMWViY2UzXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Title": "A Real Pain",
+    "Year": "2024",
+    "Price" : "10.50",
+    "Runtime": "90 min",
+    "Genre": 1,
+    "Actors": "Kieran Culkin, Jesse Eisenberg, Olha Bosova",
+    "Plot": "Mismatched cousins reunite for a tour through Poland to honor their beloved grandmother, but their old tensions resurface against the backdrop of their family history.",
+    "Language": "English, Polish",
+    "Trailer" : "https://www.youtube.com/watch?v=b2et8Vpu7Ls",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BODY2YWYwM2YtZTVlNC00MjgyLTgzYTgtNmFmYWE5ZmY1MDM5XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Title": "The Fall Guy",
+    "Year": "2024",
+    "Price" : "39.99",
+    "Runtime": "126 min",
+    "Genre": 1,
+    "Actors": "Ryan Gosling, Emily Blunt, Aaron Taylor-Johnson",
+    "Plot": "A stuntman, fresh off an almost career-ending accident, has to track down a missing movie star, solve a conspiracy and try to win back the love of his life while still doing his day job.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=j7jPnwVGdZ8",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BM2U0MTJiYTItMjNiZS00MzU4LTkxYTAtYTU0ZGY1ODJhMjRhXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Title": "A Simple Favor",
+    "Year": "2018",
+    "Price" : "19,99",
+    "Runtime": "117 min",
+    "Genre": 1,
+    "Actors": "Anna Kendrick, Blake Lively, Henry Golding",
+    "Plot": "Stephanie is a single mother with a parenting vlog who befriends Emily, a secretive upper-class woman who has a child at the same elementary school. When Emily goes missing, Stephanie takes it upon herself to investigate.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=rAqMlh0b2HU",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BZmM4MGFkMTItNzI1ZS00ODZlLThjYjktMTQyYmQzM2M2M2Y3XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Title": "This Is 40",
+    "Year": "2012",
+    "Price" : "35.00",
+    "Runtime": "134 min",
+    "Genre": 1,
+    "Actors": "Paul Rudd, Leslie Mann, Maude Apatow",
+    "Plot": "Pete and Debbie are both about to turn 40, their kids hate each other, both of their businesses are failing, they're on the verge of losing their house, and their relationship is threatening to fall apart.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=46sZURieja0",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNzQxMDQ1NjA4N15BMl5BanBnXkFtZTcwNTE5MjQ3OA@@._V1_SX300.jpg"
+  },
+  {
+    "Title": "Nobody",
+    "Year": "2021",
+    "Price" : "49.99",
+    "Runtime": "92 min",
+    "Genre": 2,
+    "Actors": "Bob Odenkirk, Aleksey Serebryakov, Connie Nielsen",
+    "Plot": "A docile family man slowly reveals his true character after his house gets burgled by two petty thieves, which, coincidentally, leads him into a bloody war with a Russian crime boss.",
+    "Language": "English, Russian, Spanish",
+    "Trailer": "https://www.youtube.com/watch?v=wZti8QKBWPo",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYmIzOWViNDEtOWRiZS00ZWM4LWFiMmEtNGJjMmQ3NTIxN2U0XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Title": "Poker Face",
+    "Year": "2023",
+    "Price" : "9.99",
+    "Runtime": "102 min",
+    "Genre": 2,
+    "Actors": "Natasha Lyonne, Benjamin Bratt, Simon Helberg",
+    "Plot": "Charlie has an extraordinary ability to determine when someone is lying. She hits the road with her Plymouth Barracuda and with every stop encounters a new cast of characters and strange crimes she can't help but investigate and s...",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=JAZV5DxV3Gw",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMzQ0NjZjMTItNzI2NS00YjY4LTljMTgtMWVhMjcyNjdjNDE5XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Title": "The Order",
+    "Year": "2024",
+    "Price" : "29.99",
+    "Runtime": "116 min",
+    "Genre": 2,
+    "Writer": "Zach Baylin, Kevin Flynn, Gary Gerhardt",
+    "Actors": "Jude Law, Nicholas Hoult, Tye Sheridan",
+    "Plot": "A series of bank robberies and car heists frightened communities in the Pacific Northwest. A lone FBI agent believes that the crimes were not the work of financially motivated criminals, but rather a group of dangerous domestic te...",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=pPZaOB4ea-0",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BZWIxOGQyYjYtOGEwOC00YWNjLWJmNTktZjJlM2RmNTdjMmVlXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Rebel Ridge",
+    "Year": "2024",
+    "Price" : "19.99",
+    "Runtime": "131 min",
+    "Genre": 2,
+    "Actors": "Aaron Pierre, Don Johnson, AnnaSophia Robb",
+    "Plot": "A former Marine grapples his way through a web of small-town corruption when an attempt to post bail for his cousin escalates into a violent standoff with the local police chief.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=2CxH3Ko9dOQ",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYTE4ZDE5ZTktZWZkMC00MGY4LWFkZDUtZTc5YWU3NzM2YmM3XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+    "Title": "Boneyard",
+    "Year": "2024",
+    "Price" : "39.99",
+    "Runtime": "96 min",
+    "Genre": 2,
+    "Actors": "Mel Gibson, 50 Cent, Brian Van Holt",
+    "Plot": "Inspired by the true events of a serial killer that may still be out there today.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=GS5OoPsRkKs",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMGZjN2JiZWEtNjRjOS00YzU1LTkwMmUtOTU4NzFkZTE4NGU5XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Back in Action",
+    "Year": "2025",
+    "Price" : "99.99",
+    "Runtime": "114 min",
+    "Genre": 3,
+    "Writer": "Seth Gordon, Brendan O'Brien, Lillian Yu",
+    "Actors": "Jamie Foxx, Cameron Diaz, McKenna Roberts",
+    "Plot": "Former CIA spies Emily and Matt are pulled back into espionage after their secret identities are exposed.",
+    "Language": "English, Polish",
+    "Trailer": "https://www.youtube.com/watch?v=MV2nYw6gL_w",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMWQ4YWYxYTAtZTlhNC00Nzc3LWE3OWUtZjY5MThlNWNiYTBiXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Wolfs",
+    "Year": "2024",
+    "Price" : "89.99",
+    "Runtime": "108 min",
+    "Genre": 3,
+    "Actors": "George Clooney, Brad Pitt, Amy Ryan",
+    "Plot": "Two rival fixers cross paths when they're both called in to help cover up a prominent New York official's misstep. Over one explosive night, they'll have to set aside their petty grievances and their egos to finish the job.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=wLJUPjiRbAM",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNWI2MzdiM2ItMTg2Zi00MTYwLThlZmItM2FkNWI4NjE3ZjRhXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "John Wick",
+    "Year": "2014",
+    "Price" : "75.00",
+    "Runtime": "101 min",
+    "Genre": 3,
+    "Actors": "Keanu Reeves, Michael Nyqvist, Alfie Allen",
+    "Plot": "John Wick is a former hitman grieving the loss of his true love. When his home is broken into, robbed, and his dog killed, he is forced to return to action to exact revenge.",
+    "Language": "English, Russian, Hungarian",
+    "Trailer": "https://www.youtube.com/watch?v=C0BMx-qxsP4",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Inception",
+    "Year": "2010",
+    "Price" : "9.99",
+    "Runtime": "148 min",
+    "Genre": 3,
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+    "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+    "Language": "English, Japanese, French",
+    "Trailer": "https://www.youtube.com/watch?v=YoHD9XEInc0",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "The Invisible Man",
+    "Year": "2020",
+    "Price" : "5.99",
+    "Runtime": "124 min",
+    "Genre": 3,
+    "Actors": "Elisabeth Moss, Oliver Jackson-Cohen, Harriet Dyer",
+    "Plot": "When Cecilia's abusive ex takes his own life and leaves her his fortune, she suspects his death was a hoax. As a series of coincidences turn lethal, Cecilia works to prove that she is being hunted by someone nobody can see.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=WO_FJdiY9dA",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYTM3NDJhZWUtZWM1Yy00ODk4LThjNmMtNDg3OGYzMGM2OGYzXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Zootopia",
+    "Year": "2016",
+    "Price" : "14.99",
+    "Runtime": "108 min",
+    "Genre": 4,
+    "Actors": "Ginnifer Goodwin, Jason Bateman, Idris Elba",
+    "Plot": "In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=jWM0ct-OLsM",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Sing",
+    "Year": "2016",
+    "Price" : "14.99",
+    "Runtime": "108 min",
+    "Genre": 4,
+    "Actors": "Matthew McConaughey, Reese Witherspoon, Seth MacFarlane",
+    "Plot": "In a city of humanoid animals, a hustling theater impresario's attempt to save his theater with a singing competition becomes grander than he anticipates even as its finalists find that their lives will never be the same.",
+    "Language": "English, Japanese",
+    "Trailer": "https://www.youtube.com/watch?v=9qPgK_u4vX8",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTYzODYzODU2Ml5BMl5BanBnXkFtZTgwNTc1MTA2NzE@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Despicable Me",
+    "Year": "2010",
+    "Price" : "14.99",
+    "Runtime": "95 min",
+    "Genre": 4,
+    "Actors": "Steve Carell, Jason Segel, Russell Brand",
+    "Plot": "Gru, a criminal mastermind, adopts three orphans as pawns to carry out the biggest heist in history. His life takes an unexpected turn when the little girls see the evildoer as their potential father.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=zzCZ1W_CUoI",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "IF",
+    "Year": "2024",
+    "Price" : "49.99",
+    "Runtime": "104 min",
+    "Genre": 4,
+    "Actors": "Cailey Fleming, Ryan Reynolds, John Krasinski",
+    "Plot": "A young girl who goes through a difficult experience begins to see everyone's imaginary friends who have been left behind as their real-life friends have grown up.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=mb2187ZQtBE",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYjFiY2U2NjUtMWIxMy00NjJkLWI3OTItYzM3MzBlZDkyMDNkXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Mufasa: The Lion King",
+    "Year": "2024",
+    "Price" : "59.99",
+    "Runtime": "118 min",
+    "Genre": 4,
+    "Actors": "Aaron Pierre, Kelvin Harrison Jr., Tiffany Boone",
+    "Plot": "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny.",
+    "Language": "English, Swahili",
+    "Trailer": "https://www.youtube.com/watch?v=7TavVZMewpY",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BZGRiZDZhZjItM2M3ZC00Y2IyLTk3Y2MtMWY5YjliNDFkZTJlXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Suicide Squad",
+    "Year": "2016",
+    "Price" : "59.99",
+    "Runtime": "123 min",
+    "Genre": 5,
+    "Actors": "Will Smith, Jared Leto, Margot Robbie",
+    "Plot": "A secret government agency recruits some of the most dangerous incarcerated super-villains to form a defensive task force. Their first mission: save the world from the apocalypse.",
+    "Language": "English, Japanese, Spanish",
+    "Trailer": "https://www.youtube.com/watch?v=CmRih_VtVAs",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Avengers: Endgame",
+    "Year": "2019",
+    "Price" : "49.99",
+    "Runtime": "181 min",
+    "Genre": 5,
+    "Actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo",
+    "Plot": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+    "Language": "English, Japanese, Xhosa, German",
+    "Trailer": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Restore Point",
+    "Year": "2023",
+    "Price" : "39.99",
+    "Runtime": "115 min",
+    "Genre": 5,
+    "Actors": "Andrea Mohylová, Matej Hádek, Milan Ondrík",
+    "Plot": "Set in central Europe during 2041, a female detective investigates the case of a murdered couple where a restoration team is able to bring one of them back to life.",
+    "Language": "Czech, Slovak",
+    "Trailer": "https://www.youtube.com/watch?v=vN8036XvJlI",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOWNjMjEzYWEtZjI5YS00NjFiLTk0MDgtOTBiODUzMTc0NGFmXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "The Matrix",
+    "Year": "1999",
+    "Price" : "19.99",
+    "Runtime": "136 min",
+    "Genre": 5,
+    "Actors": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+    "Plot": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+    "Language": "English",
+    "Trailer": "https://www.youtube.com/watch?v=9ix7TUGVYIo",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+
+  {
+    "Title": "Spider-Man: Homecoming",
+    "Year": "2017",
+    "Price" : "99.99",
+    "Runtime": "133 min",
+    "Genre": 5,
+    "Actors": "Tom Holland, Michael Keaton, Robert Downey Jr.",
+    "Plot": "Peter Parker tries to stop Adrian 'The Vulture' Toomes from selling weapons made with advanced Chitauri technology while trying to balance his life as an ordinary high school student.",
+    "Language": "English, Spanish",
+    "Trailer": "https://www.youtube.com/watch?v=rk-dF1lIbIg",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_SX300.jpg"
+  }
+
+]
