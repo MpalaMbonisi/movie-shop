@@ -11,7 +11,9 @@ import java.time.LocalDateTime;
 @Setter
 
 @Entity
-@Table(name = "ordered_movies")
+@Table(name = "ordered_movies", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"account_id", "movie_id"})
+})
 public class OrderedMovie {
     @Id
     @Column(name = "id")

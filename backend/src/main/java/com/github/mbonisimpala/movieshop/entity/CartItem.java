@@ -9,7 +9,9 @@ import lombok.*;
 @Setter
 
 @Entity
-@Table(name = "cart")
+@Table(name = "cart", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"account_id", "movie_id"})
+})
 public class CartItem {
 
     @Id

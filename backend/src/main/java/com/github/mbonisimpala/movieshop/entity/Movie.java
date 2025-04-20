@@ -18,26 +18,43 @@ public class Movie {
     private long id;
 
     @NonNull
-    @Column(name = "title", nullable = false)
+    @Column(name = "title")
     private String title;
 
     @NonNull
-    @Column(name = "genre", nullable = false)
-    private String genre;
+    @ManyToOne
+    @JoinColumn(name = "genre_id", referencedColumnName = "id")
+    private Genre genre;
 
     @NonNull
-    @Column(name = "post_url", nullable = false)
-    private String posterUrl;
+    @Column(name = "release_year")
+    private int releaseYear;
 
     @NonNull
-    @Column(name = "trailer_url", nullable = false)
-    private String trailerUrl;
+    @Column(name = "duration")
+    private String duration;
 
     @NonNull
-    @Column(name = "price", nullable = false)
+    @Column(name = "plot")
+    private String plot;
+
+    @NonNull
+    @Column(name = "actors")
+    private String actors;
+
+    @NonNull
+    @Column(name = "price")
     private String price;
 
     @NonNull
-    @Column(name = "movie_url", nullable = false)
-    private String movieUrl;
+    @Column(name = "movie_language")
+    private String movieLanguage;
+
+    @NonNull
+    @Column(name = "poster")
+    private String poster;
+
+    @NonNull
+    @Column(name = "trailer")
+    private String trailer;
 }

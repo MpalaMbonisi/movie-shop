@@ -9,7 +9,9 @@ import javax.persistence.*;
 @Setter
 
 @Entity
-@Table(name = "account")
+@Table(name = "account", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"email"})
+})
 public class Account {
     @Id
     @Column(name = "id")

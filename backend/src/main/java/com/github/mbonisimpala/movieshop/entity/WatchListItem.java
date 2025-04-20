@@ -9,7 +9,9 @@ import lombok.*;
 @Setter
 
 @Entity
-@Table(name = "watchlist")
+@Table(name = "watchlist", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"account_id", "movie_id"})
+})
 public class WatchListItem {
 
     @Id
