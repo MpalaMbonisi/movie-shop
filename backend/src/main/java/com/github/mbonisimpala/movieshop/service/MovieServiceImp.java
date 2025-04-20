@@ -20,9 +20,15 @@ public class MovieServiceImp implements MovieService{
         return unwrapMovie(movieRepository.findById(id), id);
     }
 
+
     @Override
     public List<Movie> getAllMovies() {
         return (List<Movie>) movieRepository.findAll();
+    }
+
+    @Override
+    public List<Movie> getAllMoviesByGenre(long genreId) {
+        return movieRepository.findByGenreId(genreId);
     }
 
     static Movie unwrapMovie(Optional<Movie> entity, long id){
