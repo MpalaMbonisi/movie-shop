@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { getMovies } from '../api/api';
 import { useNavigate } from 'react-router-dom';
-import './Landing.css';
+import './landing.css';
 
 const Landing = () => {
   const [movies, setMovies] = useState([]);
-  const [actionMovies, setActionMovies] = useState([]);
+  const [animationMovies, setAnimationMovies] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch all movies
     getMovies().then(res => setMovies(res.data));
 
-    // Fetch action movies (genre ID = 1)
-    fetch('http://localhost:8080/movie/genre/1')
+    // Fetch action movies (genre ID = 4) 
+    fetch('http://localhost:8080/movie/genre/4')
       .then(response => response.json())
-      .then(data => setActionMovies(data));
+      .then(data => setAnimationMovies(data));
   }, []);
 
   return (
@@ -34,26 +34,27 @@ const Landing = () => {
         </video>
         <div className="overlay">
           <div className="content text-center">
-            <h1 className="title">Welcome to MovieHub 🎬</h1>
-            <p className="subtitle">Stream your favorites. Create your collection.</p>
+            <h1 className="title">Best movie store platform in the world.</h1>
+            <p className="subtitle">Purchase your favorites movies. Best prices. 4k bluray.</p>
             <div className="buttons">
-              <button className="btn btn-primary m-2" onClick={() => navigate('/login')}>Login</button>
-              <button className="btn btn-outline-success m-2" onClick={() => navigate('/signup')}>Sign Up</button>
+              <button className="loginBtn" onClick={() => navigate('/login')}>Login</button>
+              <button className="signUpBtn" onClick={() => navigate('/signup')}>Sign Up</button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Action Movies Section */}
+      {/* Animation Movies Section */}
       <div className="movie-section">
-        <h2 className="section-title">Action Movies</h2>
-        <div className="movie-grid container">
-          {actionMovies.map(movie => (
+        <h2 className="section-title">Animation</h2>
+        <div className="movie-grid">
+          {animationMovies.map(movie => (
             <div key={movie.id} className="card">
-              <img src={movie.posterUrl} className="card-img-top" alt={movie.title} />
+              <img src={movie.poster} className="card-img-top" alt={movie.title} />
               <div className="card-body">
                 <h5 className="card-title">{movie.title}</h5>
-                <button className="btn btn-primary" onClick={() => navigate(`/movie/${movie.id}`)}>View Details</button>
+                <p className='card-price'>{movie.price} zł</p>
+                <button className="buyBtn" onClick={() => navigate('/signup')}>Purchase</button>
               </div>
             </div>
           ))}

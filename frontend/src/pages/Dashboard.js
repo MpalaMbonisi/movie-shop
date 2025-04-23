@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { getMoviesByGenre } from '../api/api';
+import { getMoviesByGenre, getMyList } from '../api/api';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import './Dashboard.css';
+import './dashboard.css';
+import Header from '../components/Header';
 
 const Dashboard = () => {
   const [moviesByGenre, setMoviesByGenre] = useState({});
@@ -10,37 +11,44 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const genres = ['drama', 'crime', 'action', 'history', 'science fiction', 'romance', 'fantasy'];
     const fetchMovies = async () => {
+      const genres = ['drama', 'crime', 'action', 'animation', 'science fiction'];
       const genreMovies = {};
-      for (let i = 0; i < genres.length; i++) {
-        const genreId = i + 1; // Genre IDs start at 1
-        const res = await getMoviesByGenre(genreId);
-        genreMovies[genres[i]] = res.data;
+
+      try {
+        // Fetch "My List" movies
+        const myListRes = await getMyList(account.id);
+        const myListMovieIds = myListRes.data.map(movie => movie.movie.id);
+
+        // Fetch movies by genre and filter out movies in "My List"
+        for (let i = 0; i < genres.length; i++) {
+          const genreId = i + 1; 
+          const res = await getMoviesByGenre(genreId);
+          const filteredMovies = res.data.filter(movie => !myListMovieIds.includes(movie.id));
+          genreMovies[genres[i]] = filteredMovies;
+        }
+
+        setMoviesByGenre(genreMovies);
+      } catch (error) {
+        console.error('Error fetching movies or My List:', error);
       }
-      setMoviesByGenre(genreMovies);
     };
+
     fetchMovies();
-  }, []);
+  }, [account.id]);
 
   return (
     <div className="dashboard-page">
-      {/* Header */}
-      <header className="dashboard-header">
-        <div className="logo" onClick={() => navigate('/dashboard')}>
-          <span className="movie">Movie</span>
-          <span className="hub">Hub</span>
-        </div>
-        <h2 className="dashboard-title">Dashboard</h2>
-      </header>
-
+      <Header />
       {/* Welcome Section */}
       <div className="welcome-section">
         <div className="overlay">
           <img src="/images/welcome.jpg" alt="Welcome" className="welcome-image" />
           <div className="content text-center">
-            <h1 className="title">Welcome to MovieHub Dashboard!</h1>
-            <p className="subtitle">Explore movies by genre and build your collection.</p>
+            <h1 className="title">Welcome to MovieHub!</h1>
+            <p className="subtitle">
+              Discover the latest blockbusters and timeless classics in stunning 4K HD. Your ultimate destination for movie entertainment.
+            </p>
           </div>
         </div>
       </div>
@@ -53,13 +61,22 @@ const Dashboard = () => {
             <div className="movie-grid">
               {moviesByGenre[genre].map((movie) => (
                 <div key={movie.id} className="card">
-                  <img src={movie.posterUrl} className="card-img-top" alt={movie.title} />
+                  <img
+                    src={movie.poster}
+                    className="card-img-top"
+                    onClick={() => navigate(`/movie/${movie.id}`)}
+                    alt={movie.title}
+                  />
                   <div className="card-body">
+                    <h4 className="release-year">{movie.releaseYear}</h4>
                     <h5 className="card-title">{movie.title}</h5>
-                    <p><strong>Price:</strong> ${movie.price}</p>
-                    <button className="btn btn-primary">Add to Watchlist</button>
-                    <button className="btn btn-secondary">Add to Cart</button>
-                    <button className="btn btn-outline-primary">View Details</button>
+                    <p className="price"><strong>Price:</strong> {movie.price} zł</p>
+                    <button
+                      className="buyBtn"
+                      onClick={() => navigate(`/movie/${movie.id}`)}
+                    >
+                      Buy
+                    </button>
                   </div>
                 </div>
               ))}

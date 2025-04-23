@@ -1,12 +1,4 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #141414;
-    color: white;
-  }
-  
-  .dashboard-page {
+.dashboard-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,24 +16,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
   
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .logo .movie {
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-  }
-  
-  .logo .hub {
-    background-color: yellow;
-    color: black;
-    padding: 5px 10px;
-  }
-  
   .dashboard-title {
     font-size: 1.8rem;
     color: white;
@@ -50,9 +24,9 @@ body {
   /* Welcome Section */
   .welcome-section {
     position: relative;
-    height: 100vh;
+    height: 30vh;
     width: 100%;
-    overflow: hidden;
+    margin-top: 5%;
   }
   
   .welcome-image {
@@ -147,10 +121,10 @@ body {
     margin-bottom: 0.5rem;
   }
   
-  .card-body p {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 1rem;
+  .release-year{
+    font-size: 1.2rem;
+    margin: 0;
+    align-items: center;
   }
   
   .btn {
@@ -193,13 +167,4 @@ body {
     color: white;
   }
   
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #000;
-    color: #fff;
-    font-size: 0.9rem;
-    width: 100%;
-    margin-top: auto;
-  }
+  

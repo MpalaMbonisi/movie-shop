@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { getAccount } from '../api/api';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import './Login.css'; // Import the CSS file for styling
+import './login.css'; // Import the CSS file for styling
 
 const Login = () => {
   const [accountId, setAccountId] = useState('');
@@ -23,7 +23,7 @@ const Login = () => {
   return (
     <div className="login-page">
       {/* Top Left Logo Button */}
-      <button className="logo-button" onClick={() => navigate('/')}>
+      <button className="logo" onClick={() => navigate('/')}>
         <span className="movie">Movie</span>
         <span className="hub">Hub</span>
       </button>
@@ -40,13 +40,13 @@ const Login = () => {
         <form onSubmit={handleLogin}>
           <input
             type="number"
-            className="form-control mb-3"
+            className="form-control"
             placeholder="Account ID"
             value={accountId}
             onChange={(e) => setAccountId(e.target.value)}
             required
           />
-          <button className="btn btn-primary btn-login">Login</button>
+          <button className="btn-login">Login</button>
         </form>
         <p className="signup-question">
           Don't have an account? <Link to="/signup" className="signup-link">Sign Up</Link>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createAccount } from '../api/api';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import './SignUp.css'; // Import the CSS file for styling
+import './signUp.css'; // Import the CSS file for styling
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -24,17 +24,23 @@ const SignUp = () => {
   return (
     <div className="signup-page">
       {/* Top Left Logo Button */}
-      <button className="logo-button" onClick={() => navigate('/')}>
+      <button className="logo" onClick={() => navigate('/')}>
         <span className="movie">Movie</span>
         <span className="hub">Hub</span>
       </button>
 
+      {/* Centered Logo */}
+      <div className="logo-centered">
+        <span className="movie">Movie</span>
+        <span className="hub">Hub</span>
+      </div>
+
       {/* Sign-Up Form */}
       <div className="signup-container">
-        <h2 className="signup-title">Sign Up</h2>
+        <h2 className="signup-title">Create Account</h2>
         <form onSubmit={handleSignup}>
           <input
-            className="form-control mb-2"
+            className="form-control"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -42,13 +48,13 @@ const SignUp = () => {
           />
           <input
             type="password"
-            className="form-control mb-3"
+            className="form-control"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button className="btn btn-primary btn-signup">Sign Up</button>
+          <button className="btn-signup">Sign Up</button>
         </form>
         <p className="login-question">
           Already have an account? <Link to="/login" className="login-link">Login</Link>

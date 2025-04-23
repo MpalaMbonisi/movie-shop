@@ -1,64 +1,12 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #141414;
-    color: white;
-  }
-  
-  .login-page {
+.login-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 93vh;
     padding: 1rem;
     text-align: center;
     position: relative;
-  }
-  
-  /* Top Left Logo Button */
-  .logo-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .logo-button .movie {
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-  }
-  
-  .logo-button .hub {
-    background-color: yellow;
-    color: black;
-    padding: 5px 10px;
-  }
-  
-  /* Centered Logo */
-  .logo-centered {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-  }
-  
-  .logo-centered .movie {
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-  }
-  
-  .logo-centered .hub {
-    background-color: yellow;
-    color: black;
-    padding: 5px 10px;
   }
   
   /* Login Container */
@@ -68,7 +16,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
   }
   
   .login-title {
@@ -98,13 +46,13 @@ body {
   }
   
   .btn-login:hover {
-    background-color: #f40612;
+    background-color: #ed7379;
   }
   
   /* Signup Question */
   .signup-question {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   
   .signup-link {
@@ -117,14 +65,3 @@ body {
     text-decoration: underline;
   }
   
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #000;
-    color: #fff;
-    font-size: 0.9rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
