@@ -1,0 +1,74 @@
+/* Header container styles *//* Header container styles */
+nav {
+  display: flex;
+  padding: 10px 20px;
+  background-color: #000;
+  height: 8%;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Button container styles */
+nav div {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; 
+  padding: 5px 10px;
+}
+
+/* Button styles */
+nav button {
+  border: none;
+  background: none;
+  color: #e4d82c;
+  font-size: 1.5rem;
+  transition-duration: 0.5s;
+  height: 40px; 
+  display: flex;
+  align-items: center; 
+  font-weight: bold;
+}
+
+nav button:hover {
+  color: aliceblue;
+}
+nav {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #000;
+    height: 8%;
+    position: fixed; /* Fix to the top of the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Button container styles */
+  nav div {
+    display: flex;
+    gap: 10px;
+    padding: 5px 10px;
+    position: absolute;
+    left: 68%;
+  }
+  
+  /* Button styles */
+  nav button {
+    border: none;
+    background: none;
+    color: #e4d82c;
+    font-size: 1.5rem;
+    transition-duration: .5s;
+    height: 40px; 
+    display: flex;
+    align-items: center; 
+    font-weight: bold;
+  }
+  
+  nav button:hover {
+    color:aliceblue;
+  }
