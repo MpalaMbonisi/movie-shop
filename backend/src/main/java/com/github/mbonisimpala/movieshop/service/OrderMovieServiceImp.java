@@ -32,6 +32,6 @@ public class OrderMovieServiceImp implements OrderedMovieService {
 
     @Override
     public List<OrderedMovie> getAllOrderedMovies(long accountId) {
-        return (List<OrderedMovie>) orderedMovieRepository.findAll();
+        return (List<OrderedMovie>) orderedMovieRepository.findByAccountId(accountId);
     }
 }
