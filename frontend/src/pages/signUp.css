@@ -65,3 +65,31 @@
   text-decoration: underline;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-page .logo{
+    display: none;
+  }
+  
+  .signup-container {
+    padding: 1.5rem;
+  }
+
+  .signup-title {
+    font-size: 1.8rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .btn-signup {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  .login-question {
+    font-size: 1.1rem;
+  }
+}

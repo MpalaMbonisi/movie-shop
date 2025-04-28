@@ -39,12 +39,12 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-page">
-      <Header />
+      <Header accountId={account.id} />
       {/* Welcome Section */}
       <div className="welcome-section">
         <div className="overlay">
           <img src="/images/welcome.jpg" alt="Welcome" className="welcome-image" />
-          <div className="content text-center">
+          <div className="content">
             <h1 className="title">Welcome to MovieHub!</h1>
             <p className="subtitle">
               Discover the latest blockbusters and timeless classics in stunning 4K HD. Your ultimate destination for movie entertainment.
@@ -72,7 +72,7 @@ const Dashboard = () => {
                     <h5 className="card-title">{movie.title}</h5>
                     <p className="price"><strong>Price:</strong> {movie.price} zł</p>
                     <button
-                      className="buyBtn"
+                      className="dashboard-buyBtn"
                       onClick={() => navigate(`/movie/${movie.id}`)}
                     >
                       Buy

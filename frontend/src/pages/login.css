@@ -1,67 +1,95 @@
 .login-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 93vh;
-    padding: 1rem;
-    text-align: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 93vh;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Login Container */
+.login-container {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 500px;
+}
+
+.login-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  background-color: #e50914;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #ed7379;
+}
+
+/* Signup Question */
+.signup-question {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.signup-link {
+  color: #46d369;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-page .logo{
+    display: none;
   }
-  
-  /* Login Container */
+
   .login-container {
-    background-color: #1c1c1c;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    max-width: 500px;
+    padding: 1.5rem;
   }
-  
+
   .login-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
   }
-  
+
   .form-control {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    padding: 0.7rem;
   }
-  
+
   .btn-login {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1.2rem;
-    background-color: #e50914;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    padding: 0.7rem;
   }
-  
-  .btn-login:hover {
-    background-color: #ed7379;
-  }
-  
-  /* Signup Question */
+
   .signup-question {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
-  
-  .signup-link {
-    color: #46d369;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .signup-link:hover {
-    text-decoration: underline;
-  }
-  
+}

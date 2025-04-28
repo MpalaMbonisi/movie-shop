@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { getCartItems, getWatchList, getMyList } from '../api/api'; // Import API methods
+import { getCartItems, getWatchList, getMyList } from '../api/api';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ accountId }) => {
   const navigate = useNavigate();
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
 
   const [cartCount, setCartCount] = useState(0);
   const [watchlistCount, setWatchlistCount] = useState(0);
   const [myListCount, setMyListCount] = useState(0);
-
-  const accountId = 1; // Replace with the actual account ID from authentication
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Fetch counts for cart, watchlist, and my list
+    setCartCount(0);
+    setWatchlistCount(0);
+    setMyListCount(0);
+
     const fetchCounts = async () => {
       try {
         const cartRes = await getCartItems(accountId);
@@ -30,7 +32,9 @@ const Header = () => {
       }
     };
 
-    fetchCounts();
+    if (accountId) {
+      fetchCounts();
+    }
   }, [accountId]);
 
   const buttons = [
@@ -40,20 +44,38 @@ const Header = () => {
     { name: `My List${myListCount > 0 ? ` (${myListCount})` : ''}`, path: '/mylist' },
   ];
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav>
       <button className="logo" onClick={() => navigate('/')}>
         <span className="movie">Movie</span>
         <span className="hub">Hub</span>
       </button>
-      <div>
+      <div className="desktop-menu">
         {buttons
-          .filter(button => location.pathname !== button.path) // Exclude the current page's button
+          .filter(button => location.pathname !== button.path)
           .map(button => (
             <button key={button.name} onClick={() => navigate(button.path)}>
               {button.name}
             </button>
           ))}
+      </div>
+      <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+        ☰
+      </div>
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <img class="nav-image-cinema" src="/images/cinema.png"/>
+        {buttons
+          .filter(button => location.pathname !== button.path)
+          .map(button => (
+            <button key={button.name} onClick={() => navigate(button.path)}>
+              {button.name}
+            </button>
+          ))}
+        <button className="close-menu" onClick={toggleMobileMenu}>✖</button>
       </div>
     </nav>
   );

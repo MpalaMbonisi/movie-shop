@@ -1,95 +1,260 @@
 .movie-details-page {
-    position: relative;
-    height: calc(100vh - 8%);
-    color: white;
-  }
-  
-  .overlayout {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
-    min-height: 100vh;
-    padding: 10% 0 0 0;
-    text-align: left;
-  }
+  position: relative;
+  height: calc(100vh - 8%);
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
 
-  .section-title{
-    text-align: left;
-    padding: 4rem;
-  }
-  
+.overlayout {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay for readability */
+  min-height: 100vh;
+  padding: 10% 5%;
+  text-align: left;
+}
+
+.movie-details-content {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.poster-section {
+  text-align: center;
+}
+
+.poster-section img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.description-section {
+  padding-left: 20px;
+  font-size: 1.2rem;
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.button-group .btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #e50914;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-group .btn:hover {
+  transform: scale(1.05);
+  background-color: #f40612;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.overview h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.overview p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background: rgba(83, 81, 81, 0.55);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.details-grid div {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.details-grid div strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Movies You May Also Like Section */
+.movie-section {
+  margin-top: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #434343;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.release-year {
+  font-size: 1rem;
+  margin: 0;
+  color: #ccc;
+}
+
+.card-price {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #ffc107;
+}
+
+.buyBtn {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #e50914;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buyBtn:hover {
+  background-color: #f40612;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .movie-details-content {
-    padding: 50px 20px;
-    display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  
-  .poster-section{
-    text-align: center;
-  }
-  
+
   .poster-section img {
-    border-radius: 10px;
-    margin-bottom: 20px;
+    max-width: 70%;
+    margin: 0 auto;
   }
-  
-  .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffc107;
-  }
-  
+
   .description-section {
-    padding-left: 20px;
-    font-size: 1.2rem;
+    padding-left: 0;
   }
-  
+
   .movie-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
-  .button-group {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 20px;
-  }
-  
+
   .button-group .btn {
-    padding: 0.8rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: beige;
-    border: none;
-    color: black;
-    border-radius: 10px;
-    cursor: pointer;
-    transition-duration: 0.5s;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
   }
 
-  .button-group .btn:hover{
-    transform: scale(1.05);
-    background-color: #e25353;
-  }
-  
-  .overview {
-    margin-bottom: 20px;
-  }
-
-  .overview p, .details-grid div{
-    font-size: 1.4rem;
-  }
-  
   .details-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: #5351518c;
-    padding: 1rem 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-details-content{
+    margin-top: 2rem;
+  }
+
+  .movie-title {
+    font-size: 1.8rem;
+  }
+
+  .button-group {
+    flex-direction: column;
     gap: 10px;
   }
-  
-  .details-grid div {
-    padding: 10px;
-    border-radius: 5px;
+
+  .button-group .btn {
+    width: 100%;
   }
 
-  
-  
+  .overview p {
+    font-size: 1.3rem;
+  }
+
+  .movie-grid {
+    grid-template-columns: 100%;
+  }
+
+  .card-img-top {
+    height: 200px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .release-year {
+    font-size: 1.2rem;
+  }
+
+  .buyBtn {
+    font-size: 1.3rem;
+    padding: 0.4rem;
+  }
+}

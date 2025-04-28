@@ -109,7 +109,7 @@ const MovieDetails = () => {
       }}
     >
       <div className="overlayout">
-        <Header />
+        <Header accountId={accountId} />
         <div className="movie-details-content">
           {/* Poster Section */}
           <div className="col-md-4 poster-section">
@@ -157,8 +157,8 @@ const MovieDetails = () => {
         </div>
         {/* Movies You May Also Like Section */}
         <div className="movie-section">
-          <h2 className="section-title">Movies You May Also Like</h2>
-          <div className="movie-grid container">
+          <h2 className="section-title">You May Also Like</h2>
+          <div className="movie-grid">
             {movies.map(movie => (
               <div key={movie.id} className="card">
                 <img 
@@ -169,7 +169,7 @@ const MovieDetails = () => {
                 <div className="card-body">
                   <h4 className="release-year">{movie.releaseYear}</h4>
                   <h5 className="card-title">{movie.title}</h5>
-                  <p className="card-price">{movie.price}zł</p>
+                  <p className="card-price"><strong>Price:</strong> {movie.price}zł</p>
                   <button className="buyBtn" onClick={() => handlePurchase(movie.id)}>Purchase</button>
                 </div>
               </div>

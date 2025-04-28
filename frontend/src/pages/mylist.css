@@ -81,3 +81,104 @@
     margin: 1em auto;
     width: 80%;
 }
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mylist-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .mylist-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .mylist-item-poster {
+        width: 80px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    .mylist-item-details {
+        width: 100%;
+    }
+
+    .mylist-item-details h4 {
+        font-size: 1.3rem;
+    }
+
+    .mylist-item-details p {
+        font-size: 1rem;
+    }
+
+    .item-details {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .mylist-buttons-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mylist-title{
+        margin-top: 15%;
+        font-size: 2em;
+      }
+
+
+    .mylist-container {
+        padding: 10px;
+    }
+
+    .mylist-item {
+        padding: 10px;
+    }
+
+    .mylist-item-details{
+        width: 80%;
+        margin: auto;
+    }
+
+    .mylist-item-poster {
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .mylist-cast{
+        display: none;
+    }
+
+    .mylist-item-details h4 {
+        font-size: 1.2rem;
+    }
+
+    .mylist-item-details p {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+
+    .item-details {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .mylist-buttons-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .mylist-item-details .btn {
+        font-size: 1.2rem;
+        border-radius: 10px;
+        padding: 0.5rem;
+    }
+}

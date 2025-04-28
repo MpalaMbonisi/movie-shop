@@ -31,9 +31,9 @@ const Cart = () => {
 
   return (
     <div>
-      <Header />
+      <Header accountId={account.id} />
       <div className="cart-container">
-        <h2>Your Cart</h2>
+        <h2 class="cart-container-title">Your Cart</h2>
         {cart.length === 0 ? (
           <p class="empty-cart-text">Your cart is empty😢.</p>
         ) : (
@@ -48,19 +48,19 @@ const Cart = () => {
                   onClick={() => navigate(`/movie/${item.movie.id}`)}
                   style={{ cursor: 'pointer' }} // Add pointer cursor for better UX
                 />
-                  <div className="cart-item-details">
-                    <div class="item-details"> 
+                  <div>
+                    <div class="cart-item-details"> 
                       <div>
-                        <p><strong>Year:</strong> {item.movie.releaseYear}</p>
-                        <p><strong>Price:</strong> {item.movie.price} zł</p>
                         <h4>{item.movie.title}</h4>
+                        <p class="cart-mobile-none"><strong>Year:</strong> {item.movie.releaseYear}</p>
+                        <p><strong>Price:</strong> {item.movie.price} zł</p>
                       </div>
                       <div class="align-left">
-                        <p><strong>Duration:</strong> {item.movie.duration}</p>
-                        <p><strong>Genre:</strong> {item.movie.genre.genre}</p>
                         <button onClick={() => handleRemove(item.movie.id)} className="btn">
                           Remove
                         </button>
+                        <p class="cart-mobile-none"><strong>Duration:</strong> {item.movie.duration}</p>
+                        <p class="cart-mobile-none"><strong>Genre:</strong> {item.movie.genre.genre}</p>
                       </div>
                     </div>
                   </div>

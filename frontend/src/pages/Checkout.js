@@ -98,7 +98,7 @@ const Checkout = () => {
                           <p><strong>Year:</strong> {item.movie.releaseYear}</p>
                           <p><strong>Duration:</strong> {item.movie.duration}</p>
                           <p><strong>Genre:</strong> {item.movie.genre.genre}</p>
-                          <p><strong>Cast:</strong> {item.movie.actors}</p>
+                          <p class="checkout-cast"><strong>Cast:</strong> {item.movie.actors}</p>
                       </div>
                     </div>
                   </div>

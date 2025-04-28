@@ -47,7 +47,7 @@ const WatchList = () => {
 
   return (
     <div>
-      <Header />
+      <Header accountId={account.id} />
       <div className="watchlist-container">
         <h2>Your Watchlist</h2>
         {watchlist.length === 0 ? (
@@ -69,9 +69,9 @@ const WatchList = () => {
                   <div className="item-details">
                     <div>
                       <p><strong>Year:</strong> {item.movie.releaseYear}</p>
-                      <p><strong>Cast:</strong> {item.movie.actors}</p>
+                      <p class="watchlist-cast"><strong>Cast:</strong> {item.movie.actors}</p>
                     </div>
-                    <div className="align-left">
+                    <div className="watchlist-align-left">
                       <p><strong>Duration:</strong> {item.movie.duration}</p>
                       <p><strong>Genre:</strong> {item.movie.genre.genre}</p>
                     </div>

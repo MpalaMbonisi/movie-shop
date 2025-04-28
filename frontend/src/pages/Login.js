@@ -29,7 +29,7 @@ const Login = () => {
       </button>
 
       {/* Centered Logo */}
-      <div className="logo-centered">
+      <div className="logo-centered" onClick={() => navigate('/')}>
         <span className="movie">Movie</span>
         <span className="hub">Hub</span>
       </div>

@@ -53,8 +53,8 @@ const Landing = () => {
               <img src={movie.poster} className="card-img-top" alt={movie.title} />
               <div className="card-body">
                 <h5 className="card-title">{movie.title}</h5>
-                <p className='card-price'>{movie.price} zł</p>
-                <button className="buyBtn" onClick={() => navigate('/signup')}>Purchase</button>
+                <p className='card-price'><strong>Price:</strong> {movie.price} zł</p>
+                <button className="landing-buyBtn" onClick={() => navigate('/signup')}>Buy</button>
               </div>
             </div>
           ))}

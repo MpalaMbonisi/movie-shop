@@ -16,14 +16,14 @@ const MyList = () => {
 
   return (
     <div>
-      <Header />
+      <Header accountId={account.id} />
       <div className="mylist-container">
         <h2>Your Movies</h2>
         {myList.length === 0 ? (
           <p className="mylist-empty-text">Your list is empty😢.</p>
         ) : (
           <div className="mylist-items">
-            <h2>My movies </h2>
+            <h2 class="mylist-title" >My movies </h2>
             {myList.map(item => (
               <div key={item.id} className="mylist-item">
                 {/* Poster redirects to movie details page */}
@@ -37,7 +37,7 @@ const MyList = () => {
                   <div className="item-details">
                     <div>
                       <p><strong>Year:</strong> {item.movie.releaseYear}</p>
-                      <p><strong>Cast:</strong> {item.movie.actors}</p>
+                      <p className="mylist-cast"><strong>Cast:</strong> {item.movie.actors}</p>
                     </div>
                     <div className="align-left">
                       <p><strong>Duration:</strong> {item.movie.duration}</p>
