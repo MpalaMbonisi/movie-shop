@@ -98,9 +98,9 @@
   color: #fff;
 }
 
-.movie-grid {
+.landing-movie-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 3-4 movies per row */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3-4 movies per row */
   gap: 1.5rem;
   padding: 0.8rem 2rem;
 }
@@ -194,7 +194,7 @@
     width: 12rem;
   }
 
-  .movie-grid {
+  .landing-movie-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2-3 movies per row */
   }
 
@@ -243,7 +243,7 @@
     width: 10rem;
   }
 
-  .movie-grid {
+  .landing-movie-grid {
     grid-template-columns: 100%; /* 1-2 movies per row */
   }
 

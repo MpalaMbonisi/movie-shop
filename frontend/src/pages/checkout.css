@@ -22,7 +22,7 @@
 }
 
 .checkout-content h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
@@ -66,14 +66,14 @@
 }
 
 .checkout-summary h3 {
-    font-size: 1.8em;
+    font-size: 1.3em;
     margin-bottom: 20px;
 }
 
-.payment-options {
+.payment-options , .payment-options-images{
     display: grid;
-    grid-template-columns: 45% 45%;
-    gap: 10%;
+    grid-template-columns: 30% 30% 30%;
+    gap: 5%;
     text-align: left;
 }
 
@@ -94,7 +94,7 @@
     padding-left: 2.5em;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 1.1em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -115,8 +115,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 1.5em;
-    width: 1.5em;
+    height: 1.6em;
+    width: 1.6em;
     background-color: #eee;
     border-radius: 50%;
 }
@@ -193,16 +193,23 @@
 
 .payment-options-images img{
     padding: 0 1em;
+    width: 80%;
 }
 
 .payment-blik{
-    width: 128px; 
-    height: 70px;
     margin: 29px auto;
 }
 
 .loading-container p{
-    font-size: 2em;
+    font-size: 1.5em;
+}
+
+.checkout-container .logo{
+    font-size: 1.2em;
+}
+
+.checkout-container .logo-centered{
+    font-size: 1.4em;
 }
 
 /* Responsive Design */

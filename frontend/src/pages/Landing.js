@@ -47,7 +47,7 @@ const Landing = () => {
       {/* Animation Movies Section */}
       <div className="movie-section">
         <h2 className="section-title">Animation</h2>
-        <div className="movie-grid">
+        <div className="landing-movie-grid">
           {animationMovies.map(movie => (
             <div key={movie.id} className="card">
               <img src={movie.poster} className="card-img-top" alt={movie.title} />

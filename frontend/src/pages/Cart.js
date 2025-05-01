@@ -56,7 +56,7 @@ const Cart = () => {
                         <p><strong>Price:</strong> {item.movie.price} zł</p>
                       </div>
                       <div class="align-left">
-                        <button onClick={() => handleRemove(item.movie.id)} className="btn">
+                        <button onClick={() => handleRemove(item.movie.id)} className="remove-cart-btn">
                           Remove
                         </button>
                         <p class="cart-mobile-none"><strong>Duration:</strong> {item.movie.duration}</p>
@@ -69,7 +69,7 @@ const Cart = () => {
             </div>
             <div className="cart-summary">
               <h3>Total Price: {calculateTotalPrice()} zł</h3>
-              <button className="btn" onClick={() => navigate('/checkout')}>
+              <button className="checkout-btn" onClick={() => navigate('/checkout')}>
                 Proceed to Checkout
               </button>
             </div>

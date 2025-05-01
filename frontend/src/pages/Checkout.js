@@ -71,8 +71,8 @@ const Checkout = () => {
             <iframe
               src="https://lottie.host/embed/05ccf8e4-0358-4324-bf8e-a6c676058c61/49WCcMLZwJ.lottie"
               style={{
-                width: '400px',
-                height: '400px',
+                width: '300px',
+                height: '300px',
                 border: 'none',
                 margin: '0 auto',
                 display: 'block',

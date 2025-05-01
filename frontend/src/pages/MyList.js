@@ -18,7 +18,6 @@ const MyList = () => {
     <div>
       <Header accountId={account.id} />
       <div className="mylist-container">
-        <h2>Your Movies</h2>
         {myList.length === 0 ? (
           <p className="mylist-empty-text">Your list is empty😢.</p>
         ) : (

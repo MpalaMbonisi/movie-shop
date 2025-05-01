@@ -1,13 +1,13 @@
 .watchlist-container {
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 80%;
+    margin: 4% 10% 0 10%;
 }
 
 .watch-list-empty-text {
     text-align: center;
     margin: 5em auto;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .watchlist-items {
@@ -46,29 +46,32 @@
     margin: 5px 0;
 }
 
-.watchlist-item-details .btn {
+.watchlist-btn {
     border: none;
     border-radius: 0;
     background-color: #4caf50;
     transition-duration: 0.4s;
     color: white;
+    padding: 1em 0;
+    border-radius: 10px;
 }
 
-.watchlist-item-details .btn:hover {
+.watchlist-btn:hover {
     background-color: #cee179;
     color: #000;
     font-weight: bold;
 }
 
-.remove-btn{
+.watchlist-remove-btn{
     border: none;
     border-radius: 0;
     background-color: #efcbcb;
     transition-duration: 0.4s;
     color: #000;
+    border-radius: 10px;
 }
 
-.remove-btn:hover{
+.watchlist-remove-btn:hover{
     background-color: #e17979;
     font-weight: bold;
 }
@@ -137,7 +140,12 @@
   @media (max-width: 768px) {
 
     .watchlist-container {
+      margin-top: 10%;
       padding: 10px;
+    }
+
+    .watchlist-container h2{
+      text-align: center;
     }
   
     .watchlist-item {
@@ -174,8 +182,8 @@
       width: 100%;
     }
   
-    .remove-btn,
-    .watchlist-item-details .btn {
+    .watchlist-remove-btn,
+    .watchlist-btn {
       font-size: 1.2rem;
       border-radius: 10px;
       padding: 0.5rem;

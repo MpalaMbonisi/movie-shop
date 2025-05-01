@@ -2,20 +2,19 @@
 nav {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
   background-color: #000;
-  height: 8%;
+  height: 12%;
   position: fixed;
-  top: 0;
+  top: 0em;
   left: 0;
-  width: 90%;
+  width: 100%;
   z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
 /* Logo styles */
 nav .logo {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #e4d82c;
   font-weight: bold;
   border: none;
@@ -32,13 +31,15 @@ nav .logo:hover {
   display: flex;
   gap: 10px;
   margin-left: auto;
+  margin-right: 2em;
 }
 
 .desktop-menu button {
   border: none;
   background: none;
   color: #e4d82c;
-  font-size: 1.5rem;
+  padding: 1em;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
   cursor: pointer;
 }
@@ -53,6 +54,7 @@ nav .logo:hover {
   font-size: 2rem;
   color: #e4d82c;
   margin-left: auto;
+  margin-right: .5em;
   cursor: pointer;
 }
 
@@ -109,14 +111,58 @@ nav .logo:hover {
   text-align: right;
 }
 
+/* Add styles for icon buttons */
+.icon-button {
+  position: relative;
+  border: none;
+  background: none;
+  color: #e4d82c;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5em;
+  transition: color 0.3s ease;
+}
+
+.icon-button:hover {
+  color: aliceblue;
+}
+
+/* Badge for counts */
+.count-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 0.2em 0.6em;
+}
+
+/* Logout button specific styles */
+.logout-button {
+  margin-left: 1em;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .desktop-menu {
     display: none;
   }
 
+  nav{
+    height: 8%;
+    top: 0;
+  }
+
   .mobile-menu-icon {
     display: block;
+  }
+
+  .count-badge{
+    position: relative;
+    margin-left: .5em;
+    font-size: .8em;
   }
 }
 

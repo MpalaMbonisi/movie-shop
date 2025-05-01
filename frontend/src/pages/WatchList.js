@@ -77,20 +77,20 @@ const WatchList = () => {
                     </div>
                   </div>
                   <div className="buttons-grid"> 
-                    <button onClick={() => handleRemove(item.movie.id)} className="remove-btn">
+                    <button onClick={() => handleRemove(item.movie.id)} className="watchlist-remove-btn">
                       Remove
                     </button> 
                     {isMovieInMyList(item.movie.id) ? (
                       <button
                         onClick={() => window.open(item.movie.trailer, '_blank')}
-                        className="btn"
+                        className="watchlist-btn"
                       >
                         Watch
                       </button>
                     ) : (
                       <button
                         onClick={() => handleBuy(item.movie.id)}
-                        className="btn"
+                        className="watchlist-btn"
                       >
                         Buy
                       </button>

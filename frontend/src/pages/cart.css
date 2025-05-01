@@ -1,13 +1,17 @@
 .cart-container {
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 80%;
+    margin: 4% 10% 0 10%;
+  }
+
+  .align-left{
+    display: grid;
   }
 
   .empty-cart-text{
     text-align: center;
     margin: 5em auto;
-    font-size: 2em;
+    font-size: 1.5em;
   }
   
   .cart-items {
@@ -17,8 +21,8 @@
   }
   
   .cart-item {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 30% 70%;
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -27,18 +31,23 @@
     color: black;
   }
 
-  .cart-item-details .btn{
+  .remove-cart-btn{
     border: none;
     background-color: #f27f7f;
     transition-duration: 0.4s;
+    padding: 1em;
+    width: 100%;
+    border-radius: 10px;
+    margin: 1.3em 0;
+    text-align: center;
   }
 
-  .cart-item-details .btn:hover{
+  .remove-cart-btn:hover{
     background-color: #ef4747;
   }
   
   .cart-item-poster {
-    width: 100px;
+    width: 100%;
     height: 150px;
     object-fit: cover;
     margin-right: 15px;
@@ -50,12 +59,14 @@
   }
   
   .cart-item-details h4 {
-    margin: 0 0 10px;
+    padding: 1em;
+    margin: 0;
     font-size: 1.5rem;
   }
   
   .cart-item-details p {
-    margin: 5px 0;
+    padding: 0 1em;
+    margin: 0;
   }
   
   .cart-summary {
@@ -72,7 +83,7 @@
     padding-left: 1em;
   }
 
-  .cart-summary .btn{
+  .checkout-btn{
     font-size: 1.2em;
     border: none;
     border-radius: 0;
@@ -80,7 +91,7 @@
     background-color: var(--primary-color);
   }
 
-  .cart-summary .btn:hover{
+  .checkout-btn{
     background-color: #8de58d;
     font-weight: bold;
   }
@@ -123,7 +134,7 @@
     font-size: 1rem;
   }
 
-  .cart-summary .checkout-btn {
+  .checkout-btn {
     font-size: 1rem;
     padding: 0.6rem 1.5rem;
   }
@@ -132,7 +143,8 @@
 @media (max-width: 768px) {
   .cart-item{
     display: grid;
-    grid-template-columns: 30% 60%;
+    grid-template-columns: 40% 55%;
+    gap: 5%;
   }
 
   .cart-container{
@@ -159,7 +171,7 @@
 
   .cart-item-details{
     grid-template-columns: 100%;
-    gap: 1em;
+    gap: 0;
   }
 
   .cart-item-actions {
@@ -195,13 +207,17 @@
     padding: 1em 0;
   }
 
-  .cart-summary .btn {
+  .checkout-btn {
     font-size: 1.2rem;
     padding: 2rem 0;
     font-weight: bolder;
   }
 
   .cart-item-details{
-    width: 12rem;
+    width: 100%;
+  }
+  
+  .cart-item-details h4{
+    padding: 0 0.5em;
   }
 }

@@ -52,21 +52,19 @@ const MovieDetails = () => {
 
   const handleAddToCart = async () => {
     try {
-      // Call the addToCart API method
-      await addToCart(accountId, movieId);
-
-      // Refresh cart list
-      const cartRes = await getCartItems(accountId);
-      setCartList(cartRes.data);
-
-      // Redirect to the cart page
-      navigate('/cart');
+      await addToCart(accountId, movieId); // Call the addToCart API method
+      const userChoice = window.confirm(
+        "Movie added to cart! Do you want to continue shopping for more movies?"
+      );
+      if (userChoice) {
+        navigate('/dashboard'); // Redirect to the dashboard
+      } else {
+        navigate('/cart'); // Redirect to the cart
+      }
     } catch (error) {
-      console.error('Failed to add movie to cart:', error);
-      alert('Failed to add movie to cart. Please try again.');
+      alert("Failed to add movie to cart. Please try again.");
     }
   };
-
   const handleAddToWatchList = async () => {
     try {
       // Call the addToWatchList API method
@@ -158,19 +156,19 @@ const MovieDetails = () => {
         {/* Movies You May Also Like Section */}
         <div className="movie-section">
           <h2 className="section-title">You May Also Like</h2>
-          <div className="movie-grid">
+          <div className="movie-details-movie-grid">
             {movies.map(movie => (
-              <div key={movie.id} className="card">
+              <div key={movie.id} className="movie-details-card">
                 <img 
                     src={movie.poster} 
-                    className="card-img-top"
+                    className="movie-details-card-img-top"
                     onClick={() => handlePurchase(movie.id)}
                      alt={movie.title} />
-                <div className="card-body">
-                  <h4 className="release-year">{movie.releaseYear}</h4>
-                  <h5 className="card-title">{movie.title}</h5>
-                  <p className="card-price"><strong>Price:</strong> {movie.price}zł</p>
-                  <button className="buyBtn" onClick={() => handlePurchase(movie.id)}>Purchase</button>
+                <div className="movie-details-card-body">
+                  <h4 className="movie-details-release-year">{movie.releaseYear}</h4>
+                  <h5 className="movie-details-card-title">{movie.title}</h5>
+                  <p className="movie-details-card-price"><strong>Price:</strong> {movie.price}zł</p>
+                  <button className="movie-details-buyBtn" onClick={() => handlePurchase(movie.id)}>Buy</button>
                 </div>
               </div>
             ))}

@@ -39,7 +39,7 @@
   z-index: -1;
 }
 
-.overlay {
+.dashboard-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,7 +54,7 @@
 }
 
 .content .title {
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -62,7 +62,7 @@
 }
 
 .content .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
   color: white;
@@ -70,28 +70,29 @@
 
 /* Movies Section */
 .movies-section {
-  width: 100%;
+  width: 80%;
   padding: 2rem;
 }
 
-.genre-section {
+.dashboard-genre-section {
   margin-bottom: 2rem;
 }
 
-.genre-title {
+.dashboard-genre-title {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 1rem;
+  width: 80%;
+  margin: 1rem auto;
   color: #fff;
 }
 
-.movie-grid {
+.dashboard-movie-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
-.card {
+.dashboard-card {
   background-color: #434343;
   color: white;
   border: none;
@@ -99,37 +100,38 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  width: 200px;
 }
 
-.card:hover {
+.dashboard-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-.card-img-top {
+.dashboard-card-img-top {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.card-body {
+.dashboard-card-body {
   padding: 1rem;
   text-align: center;
 }
 
-.card-title {
+.dashboard-card-title {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.release-year {
+.dashboard-release-year {
   font-size: 1.2rem;
   margin: 0;
   align-items: center;
 }
 
-.price {
+.dashboard-price {
   font-size: 1rem;
   margin: 0.5rem 0;
 }
@@ -138,7 +140,7 @@
   width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #e50914;
   border: none;
   color: white;
@@ -147,7 +149,7 @@
 }
 
 .dashboard-buyBtn:hover {
-  background-color: #f40612;
+  background-color: #da8388;
 }
 
 /* Responsive Design */
@@ -160,11 +162,11 @@
     font-size: 1.2rem;
   }
 
-  .movie-grid {
+  .dashboard-movie-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .card-img-top {
+  .dashboard-card-img-top {
     height: 180px;
   }
 }
@@ -181,15 +183,19 @@
     padding: 1.2rem;
   }
 
-  .movie-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .dashboard-card{
+    width: 300px;
   }
 
-  .card-img-top {
-    height: 150px;
+  .dashboard-movie-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
-  .release-year {
+  .dashboard-card-img-top {
+    height: 300px;
+  }
+
+  .dashboard-release-year {
     font-size: 1.2rem;
   }
 

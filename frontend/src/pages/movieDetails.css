@@ -31,11 +31,6 @@
   height: auto;
 }
 
-.price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffc107;
-}
 
 .description-section {
   padding-left: 20px;
@@ -119,13 +114,13 @@
   color: #fff;
 }
 
-.movie-grid {
+.movie-details-movie-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-.card {
+.movie-details-card {
   background-color: #434343;
   color: white;
   border: none;
@@ -133,56 +128,56 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  width: 200px;
 }
 
-.card:hover {
+.movie-details-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-.card-img-top {
+.movie-details-card-img-top {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
 }
 
-.card-body {
+.movie-details-card-body {
   padding: 1rem;
   text-align: center;
 }
 
-.card-title {
+.movie-details-card-title {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.release-year {
-  font-size: 1rem;
+.movie-details-release-year {
+  font-size: 1.2rem;
   margin: 0;
-  color: #ccc;
+  align-items: center;
 }
 
-.card-price {
+.movie-details-price {
   font-size: 1rem;
   margin: 0.5rem 0;
-  color: #ffc107;
 }
 
-.buyBtn {
+
+.movie-details-buyBtn {
   width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #e50914;
   border: none;
   color: white;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.buyBtn:hover {
-  background-color: #f40612;
+.movie-details-buyBtn:hover {
+  background-color: #da8388;
 }
 
 /* Responsive Design */
@@ -237,24 +232,26 @@
     font-size: 1.3rem;
   }
 
-  .movie-grid {
-    grid-template-columns: 100%;
+  .movie-details-card{
+    width: 100%;
   }
 
-  .card-img-top {
-    height: 200px;
+  .movie-details-movie-grid {
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
-  .card-title {
-    font-size: 1rem;
+  .movie-details-card-img-top {
+    height: 300px;
   }
 
-  .release-year {
+  .movie-details-release-year {
     font-size: 1.2rem;
   }
 
-  .buyBtn {
-    font-size: 1.3rem;
+  .movie-details-buyBtn {
+    font-size: 1.1rem;
     padding: 0.4rem;
   }
 }
