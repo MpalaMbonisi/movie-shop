@@ -1,5 +1,6 @@
 package com.github.mbonisimpala.movieshop.security.filter;
 
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.github.mbonisimpala.movieshop.exception.AccountNotFoundException;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -18,6 +19,12 @@ public class ExceptionHandlerFilter extends OncePerRequestFilter {
         catch(AccountNotFoundException e){
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             response.getWriter().write("Email does not exist in our records.");
+            response.getWriter().flush();
+        }
+
+        catch(JWTVerificationException e){
+            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+            response.getWriter().write("Your Json Web Token is invalid.");
             response.getWriter().flush();
         }
 
