@@ -23,6 +23,7 @@ public class AccountController {
 
     @PostMapping("/register")
     public ResponseEntity<Account> saveAccount(@RequestBody @Valid Account account){
+        accountService.addAccount(account);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
