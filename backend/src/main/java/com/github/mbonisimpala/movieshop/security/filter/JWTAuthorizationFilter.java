@@ -13,21 +13,23 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
 
-public class JWTAuthorisationFilter extends OncePerRequestFilter {
+public class JWTAuthorizationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String header = request.getHeader("Authorization"); // Bearer + JWT token
-        // Skip authorisation when the user is registering a new account
+        // Skip authorization when the user is registering a new account
         if (header == null || !header.startsWith(SecurityConstants.BEARER)){
             filterChain.doFilter(request, response);
+            return;
         }
         String token = header.replace(SecurityConstants.BEARER, ""); // JWT token
         String user = JWT.require(Algorithm.HMAC512(SecurityConstants.SECRET_KEY))
                 .build()
                 .verify(token)
                 .getSubject();
-        Authentication authentication = new UsernamePasswordAuthenticationToken(user, null);
+        Authentication authentication = new UsernamePasswordAuthenticationToken(user, null, Arrays.asList());
         SecurityContextHolder.getContext().setAuthentication(authentication);
         filterChain.doFilter(request, response);
     }
