@@ -21,7 +21,7 @@ public class CustomAuthenticationManager implements AuthenticationManager {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        Account account = accountServic.getAccountByEmail(authentication.getName());
+        Account account = accountService.getAccountByEmail(authentication.getName());
         if(!bCryptPasswordEncoder.matches(authentication.getCredentials().toString(), account.getPassword())){
             throw new BadCredentialsException("Incorrect Password");
         }
