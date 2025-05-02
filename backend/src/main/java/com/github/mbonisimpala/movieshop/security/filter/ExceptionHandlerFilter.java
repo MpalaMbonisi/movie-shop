@@ -1,5 +1,6 @@
 package com.github.mbonisimpala.movieshop.security.filter;
 
+import com.github.mbonisimpala.movieshop.exception.AccountNotFoundException;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -13,7 +14,14 @@ public class ExceptionHandlerFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         try{
             filterChain.doFilter(request, response);
-        }catch(RuntimeException e){
+        }
+        catch(AccountNotFoundException e){
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            response.getWriter().write("Email does not exist in our records.");
+            response.getWriter().flush();
+        }
+
+        catch(RuntimeException e){
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().write("Bad Request");
             response.getWriter().flush();
