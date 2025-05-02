@@ -16,12 +16,12 @@ public class AccountController {
     @Autowired
     AccountService accountService;
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Account> getAccount(@PathVariable Long id){
-        return new ResponseEntity<>(accountService.getAccount(id), HttpStatus.OK);
+    @GetMapping("/{email}")
+    public ResponseEntity<Account> getAccount(@PathVariable String email){
+        return new ResponseEntity<>(accountService.getAccountByEmail(email), HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<Account> saveAccount(@RequestBody @Valid Account account){
         return new ResponseEntity<>(accountService.addAccount(account), HttpStatus.CREATED);
     }
