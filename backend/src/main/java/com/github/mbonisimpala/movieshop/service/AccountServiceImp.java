@@ -24,9 +24,15 @@ public class AccountServiceImp implements AccountService{
     }
 
     @Override
+    public Long getAccountIdByEmail(String email) {
+        return unwrapAccount(accountRepository.findByEmail(email), email).getId();
+    }
+
+    @Override
     public Account getAccountByEmail(String email) {
         return unwrapAccount(accountRepository.findByEmail(email), email);
     }
+
 
     @Override
     public Account getAccount(Long id) {

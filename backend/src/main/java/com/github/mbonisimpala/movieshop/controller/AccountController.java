@@ -17,8 +17,8 @@ public class AccountController {
     AccountService accountService;
 
     @GetMapping("/{email}")
-    public ResponseEntity<Account> getAccount(@PathVariable String email){
-        return new ResponseEntity<>(accountService.getAccountByEmail(email), HttpStatus.OK);
+    public ResponseEntity<Long> getAccount(@PathVariable String email){
+        return new ResponseEntity<>(accountService.getAccountIdByEmail(email), HttpStatus.OK);
     }
 
     @PostMapping("/register")
