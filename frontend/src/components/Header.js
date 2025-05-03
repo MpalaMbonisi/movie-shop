@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getCartItems, getWatchList, getMyList } from '../api/api';
 import { FaSignOutAlt, FaHome, FaHeart, FaShoppingCart, FaList } from 'react-icons/fa'; // Import icons
-import './Header.css';
+import './header.css';
 
 const Header = ({ accountId }) => {
   const navigate = useNavigate();
@@ -50,14 +50,16 @@ const Header = ({ accountId }) => {
   };
 
   const onLogout = () => {
-    // Clear any user-related data (e.g., tokens, session storage, etc.)
-    localStorage.removeItem('authToken'); // Example: Remove token from local storage
-    navigate('/'); // Redirect to the landing page
+    // Clear all user-related data
+    localStorage.removeItem('token'); 
+    localStorage.removeItem('accountId'); 
+    localStorage.removeItem('authToken'); 
+    navigate('/'); 
   };
 
   return (
     <nav>
-      <button className="logo" onClick={() => navigate('/')}>
+      <button className="logo" onClick={() => navigate('/dashboard')}>
         <span className="movie">Movie</span>
         <span className="hub">Hub</span>
       </button>
