@@ -30,8 +30,4 @@ public class OrderedMovie {
     @JoinColumn(name = "movie_id")
     private Movie movie;
 
-    @NonNull
-    @Column(name = "purchase_date", nullable = false)
-    private LocalDateTime purchaseDate;
-
 }
