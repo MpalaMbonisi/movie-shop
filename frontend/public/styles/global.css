@@ -64,3 +64,23 @@ button {
     color: black;
     padding: 5px 10px;
   }
+
+  .password-container {
+    position: relative;
+  }
+  
+  .btn-show-password {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .btn-show-password:hover {
+    text-decoration: underline;
+  }
