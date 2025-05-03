@@ -26,12 +26,12 @@ public class OrderMovieServiceImp implements OrderedMovieService {
     public OrderedMovie saveOrderedMovie(long accountId, long movieId) {
         Account account = accountService.getAccount(accountId);
         Movie movie = movieService.getMovie(movieId);
-        OrderedMovie orderedMovie = new OrderedMovie(account, movie, LocalDateTime.now());
+        OrderedMovie orderedMovie = new OrderedMovie(account, movie);
         return orderedMovieRepository.save(orderedMovie);
     }
 
     @Override
     public List<OrderedMovie> getAllOrderedMovies(long accountId) {
-        return (List<OrderedMovie>) orderedMovieRepository.findByAccountId(accountId);
+        return orderedMovieRepository.findByAccountId(accountId);
     }
 }

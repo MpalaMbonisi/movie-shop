@@ -13,7 +13,7 @@ import java.util.Optional;
 public class AccountServiceImp implements AccountService{
 
     @Autowired
-    AccountRepository accountRepository;
+    private AccountRepository accountRepository;
     @Autowired
     private BCryptPasswordEncoder byCryptPasswordEncoder;
 

@@ -31,7 +31,7 @@ public class WatchListServiceImp implements WatchListService {
 
     @Override
     public List<WatchListItem> getAllWatchListItems(long accountId) {
-        return (List<WatchListItem>) watchListRepository.findByAccountId(accountId);
+        return watchListRepository.findByAccountId(accountId);
     }
 
     @Override
