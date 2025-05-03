@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { getCartItems, removeFromCart } from '../api/api';
-import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import './cart.css'; // Import the CSS file for styling
 
 const Cart = () => {
-  const { account } = useAuth();
   const [cart, setCart] = useState([]);
   const navigate = useNavigate();
+  const accountId = localStorage.getItem('accountId');
 
   const refresh = () => {
-    getCartItems(account.id).then(res => setCart(res.data));
+    getCartItems(accountId).then(res => setCart(res.data));
   };
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const Cart = () => {
   }, []);
 
   const handleRemove = async (movieId) => {
-    await removeFromCart(account.id, movieId);
+    await removeFromCart(accountId, movieId);
     refresh();
   };
 
@@ -31,7 +30,7 @@ const Cart = () => {
 
   return (
     <div>
-      <Header accountId={account.id} />
+      <Header accountId={accountId} />
       <div className="cart-container">
         <h2 class="cart-container-title">Your Cart</h2>
         {cart.length === 0 ? (

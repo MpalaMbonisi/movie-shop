@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { getCartItems, orderMovie, clearCart } from '../api/api';
-import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import './checkout.css'; // Import the CSS file for styling
 
 const Checkout = () => {
-  const { account } = useAuth();
+  const accountId = localStorage.getItem('accountId');
   const [items, setItems] = useState([]);
   const [selectedPayment, setSelectedPayment] = useState('');
   const [isLoading, setIsLoading] = useState(false); // State to manage loading animation
   const navigate = useNavigate();
 
   useEffect(() => {
-    getCartItems(account.id).then(res => setItems(res.data));
-  }, [account.id]);
+    getCartItems(accountId).then(res => setItems(res.data));
+  }, [accountId]);
 
   const calculateTotalPrice = () => {
     return items
@@ -32,11 +31,11 @@ const Checkout = () => {
     try {
       // Add all movies to "My List"
       for (const item of items) {
-        await orderMovie(account.id, item.movie.id);
+        await orderMovie(accountId, item.movie.id);
       }
 
       // Clear the cart after successful purchase
-      await clearCart(account.id);
+      await clearCart(accountId);
 
       // Redirect to My List after a short delay
       setTimeout(() => {

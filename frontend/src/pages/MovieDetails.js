@@ -12,7 +12,7 @@ const MovieDetails = () => {
   const [cartList, setCartList] = useState([]);
   const [watchList, setWatchList] = useState([]);
   const navigate = useNavigate();
-  const accountId = 1; // Replace with the actual account ID (e.g., from authentication)
+  const accountId = localStorage.getItem('accountId');
 
   useEffect(() => {
     const fetchMovieDetails = async () => {

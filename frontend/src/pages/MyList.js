@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { getMyList } from '../api/api';
-import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import './mylist.css'; // Import the CSS file for styling
 
 const MyList = () => {
-  const { account } = useAuth();
+  const accountId = localStorage.getItem('accountId');
   const [myList, setMyList] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    getMyList(account.id).then(res => setMyList(res.data));
-  }, [account.id]);
+    getMyList(accountId).then(res => setMyList(res.data));
+  }, [accountId]);
 
   return (
     <div>
-      <Header accountId={account.id} />
+      <Header accountId={accountId} />
       <div className="mylist-container">
         {myList.length === 0 ? (
           <p className="mylist-empty-text">Your list is empty😢.</p>

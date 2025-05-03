@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { getMoviesByGenre, getMyList } from '../api/api';
-import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import './dashboard.css';
 import Header from '../components/Header';
 
 const Dashboard = () => {
   const [moviesByGenre, setMoviesByGenre] = useState({});
-  const { account } = useAuth();
   const navigate = useNavigate();
+
+  // Retrieve accountId from localStorage
+  const accountId = localStorage.getItem('accountId');
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -17,7 +18,7 @@ const Dashboard = () => {
 
       try {
         // Fetch "My List" movies
-        const myListRes = await getMyList(account.id);
+        const myListRes = await getMyList(accountId);
         const myListMovieIds = myListRes.data.map(movie => movie.movie.id);
 
         // Fetch movies by genre and filter out movies in "My List"
@@ -35,11 +36,11 @@ const Dashboard = () => {
     };
 
     fetchMovies();
-  }, [account.id]);
+  }, [accountId]);
 
   return (
     <div className="dashboard-page">
-      <Header accountId={account.id} />
+      <Header accountId={accountId} />
       {/* Welcome Section */}
       <div className="welcome-section">
         <div className="dashboard-overlay">

@@ -1,31 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { getWatchList, getMyList, getCartItems, addToCart, removeFromWatchList } from '../api/api';
-import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import './watchlist.css'; // Import the CSS file for styling
 
 const WatchList = () => {
-  const { account } = useAuth();
+  const accountId = localStorage.getItem('accountId');
   const [watchlist, setWatchlist] = useState([]);
   const [myList, setMyList] = useState([]);
   const [cartList, setCartList] = useState([]);
   const navigate = useNavigate();
 
   const refresh = () => {
-    getWatchList(account.id).then(res => setWatchlist(res.data));
-    getCartItems(account.id).then(res => setCartList(res.data));
+    getWatchList(accountId).then(res => setWatchlist(res.data));
+    getCartItems(accountId).then(res => setCartList(res.data));
   };
 
   useEffect(() => {
     // Fetch watchlist, cart, and my list
-    getWatchList(account.id).then(res => setWatchlist(res.data));
-    getCartItems(account.id).then(res => setCartList(res.data));
-    getMyList(account.id).then(res => setMyList(res.data));
-  }, [account.id]);
+    getWatchList(accountId).then(res => setWatchlist(res.data));
+    getCartItems(accountId).then(res => setCartList(res.data));
+    getMyList(accountId).then(res => setMyList(res.data));
+  }, [accountId]);
 
   const handleRemove = async (movieId) => {
-    await removeFromWatchList(account.id, movieId);
+    await removeFromWatchList(accountId, movieId);
     refresh();
   };
 
@@ -34,7 +33,7 @@ const WatchList = () => {
 
     if (!isInCart) {
       // Add to cart if not already in the cart
-      await addToCart(account.id, movieId);
+      await addToCart(accountId, movieId);
     }
 
     // Redirect to the cart page
@@ -47,7 +46,7 @@ const WatchList = () => {
 
   return (
     <div>
-      <Header accountId={account.id} />
+      <Header accountId={accountId} />
       <div className="watchlist-container">
         <h2>Your Watchlist</h2>
         {watchlist.length === 0 ? (

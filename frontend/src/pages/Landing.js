@@ -9,6 +9,10 @@ const Landing = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('accountId');
+    localStorage.removeItem('authToken'); 
+
     // Fetch all movies
     getMovies().then(res => setMovies(res.data));
 

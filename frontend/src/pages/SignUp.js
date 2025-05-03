@@ -1,23 +1,35 @@
 import React, { useState } from 'react';
-import { createAccount } from '../api/api';
+import { registerAccount } from '../api/api'; // Use the correct API function for signup
 import { useNavigate, Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 import './signUp.css'; // Import the CSS file for styling
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useAuth();
+  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await createAccount({ email, password });
-      login(res.data);
-      navigate('/dashboard');
+      // Call the API to register the account
+      await registerAccount({ email, password });
+      alert('Account created successfully! Please log in.');
+      navigate('/login'); // Redirect to the login page after successful signup
     } catch (err) {
-      alert('Error creating account. Please check your input.');
+      // Handle specific error messages from the backend
+      if (err.response) {
+        const { status, data } = err.response;
+        if (status === 400) {
+          alert(data || 'Invalid input. Please check your details.'); // Handle bad request
+        } else if (status === 409) {
+          alert(data || 'An account with this email already exists.'); // Handle conflict
+        } else {
+          alert('An unexpected error occurred. Please try again.');
+        }
+      } else {
+        alert('Unable to connect to the server. Please check your network.');
+      }
     }
   };
 
@@ -46,14 +58,23 @@ const SignUp = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <input
-            type="password"
-            className="form-control"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <div className="password-container">
+            <input
+              type={showPassword ? 'text' : 'password'} // Toggle input type
+              className="form-control"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button
+              type="button"
+              className="btn-show-password"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? 'Hide' : 'Show'}
+            </button>
+          </div>
           <button className="btn-signup">Sign Up</button>
         </form>
         <p className="login-question">
