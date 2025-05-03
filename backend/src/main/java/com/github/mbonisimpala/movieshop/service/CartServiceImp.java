@@ -23,7 +23,7 @@ public class CartServiceImp implements CartService {
 
     @Override
     public List<CartItem> getAllCartItems(long accountId) {
-        return (List<CartItem>) cartRepository.findAll();
+        return cartRepository.findByAccountId(accountId);
     }
 
     @Override
