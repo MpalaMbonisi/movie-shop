@@ -1,6 +1,7 @@
 package com.github.mbonisimpala.movieshop.security;
 
 public class SecurityConstants {
+    public static final String MOVIES_PATH = "/movie/**";
     public static final String SECRET_KEY = "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALtygGpg/DSVC9Zv9gXN3JQQgCCmkpyd" +
             "/0AZUzqgtrPoYEJTu7z9AdGSwYT+ySEU5FpbANg6xoSbTHHnr+WSUb0CAwEAAQ==";
     public static final int TOKEN_EXPIRATION = 7_200_000; // 2 hours
