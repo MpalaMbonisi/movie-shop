@@ -2,6 +2,7 @@ package com.github.mbonisimpala.movieshop.service;
 
 import com.github.mbonisimpala.movieshop.entity.Genre;
 import com.github.mbonisimpala.movieshop.entity.Movie;
+import com.github.mbonisimpala.movieshop.exception.GenreNotFoundException;
 import com.github.mbonisimpala.movieshop.exception.MovieNotFoundException;
 import com.github.mbonisimpala.movieshop.repository.MovieRepository;
 import org.junit.jupiter.api.Assertions;
@@ -149,13 +150,12 @@ public class MovieServiceImpTest {
     public void getAllMoviesByGenre_NoMoviesWithGenreId_ShouldReturnEmptyList(){
         // Arrange
         long genreId = 1L;
-        when(movieRepository.findByGenreId(genreId)).thenReturn(List.of());
+        when(movieRepository.findByGenreId(genreId)).thenThrow(new GenreNotFoundException(genreId));
 
-        // Act
-        List<Movie> results = movieService.getAllMoviesByGenre(genreId);
-
-        // Assert
-        Assertions.assertTrue(results.isEmpty(), "List should be empty.");
+        // Act & Assert
+        Assertions.assertThrows(GenreNotFoundException.class, () -> {
+            movieService.getAllMoviesByGenre(genreId);
+        }, "Should throw GenreNotFoundException.");
 
     }
 }
