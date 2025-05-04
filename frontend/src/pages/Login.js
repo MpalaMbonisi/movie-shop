@@ -15,12 +15,15 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
+      // Convert email to lowercase before sending to the API
+      const lowerCaseEmail = email.toLowerCase();
+  
       // Clear any existing token and accountId
       localStorage.removeItem('token');
       localStorage.removeItem('accountId');
   
       // Authenticate and get the JWT token
-      const authResponse = await axios.post('http://localhost:8080/account/authenticate', { email, password });
+      const authResponse = await axios.post('http://localhost:8080/account/authenticate', { email: lowerCaseEmail, password });
       const token = authResponse.headers['authorization']?.split(' ')[1];
       if (!token) {
         throw new Error('Token not found in response');
@@ -30,11 +33,8 @@ const Login = () => {
       localStorage.setItem('token', token);
   
       // Fetch the accountId
-      const accountId = await authenticateAccount(email); // Directly get the accountId
+      const accountId = await authenticateAccount(lowerCaseEmail); // Directly get the accountId
       localStorage.setItem('accountId', accountId);
-  
-      // Log the accountId for debugging
-      console.log('Logged in with accountId:', accountId);
   
       // Navigate to the dashboard
       login({ token, accountId });

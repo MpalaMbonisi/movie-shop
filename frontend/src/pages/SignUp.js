@@ -12,8 +12,11 @@ const SignUp = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
+      // Convert email to lowercase before sending to the API
+      const lowerCaseEmail = email.toLowerCase();
+  
       // Call the API to register the account
-      await registerAccount({ email, password });
+      await registerAccount({ email: lowerCaseEmail, password });
       alert('Account created successfully! Please log in.');
       navigate('/login'); // Redirect to the login page after successful signup
     } catch (err) {
