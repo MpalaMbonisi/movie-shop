@@ -17,7 +17,7 @@ public class CartController {
     CartService cartService;
 
     @GetMapping("/account/{accountId}")
-    public ResponseEntity<List<CartItem>> getAllCartIterms(@PathVariable Long accountId){
+    public ResponseEntity<List<CartItem>> getAllCartItems(@PathVariable Long accountId){
         return new ResponseEntity<>(cartService.getAllCartItems(accountId), HttpStatus.OK);
     }
 
