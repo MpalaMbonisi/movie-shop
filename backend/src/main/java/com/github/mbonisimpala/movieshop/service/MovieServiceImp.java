@@ -1,6 +1,7 @@
 package com.github.mbonisimpala.movieshop.service;
 
 import com.github.mbonisimpala.movieshop.entity.Movie;
+import com.github.mbonisimpala.movieshop.exception.GenreNotFoundException;
 import com.github.mbonisimpala.movieshop.exception.MovieNotFoundException;
 import com.github.mbonisimpala.movieshop.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,12 @@ public class MovieServiceImp implements MovieService{
 
     @Override
     public List<Movie> getAllMoviesByGenre(long genreId) {
-        return movieRepository.findByGenreId(genreId);
+        if (movieRepository.findByGenreId(genreId).isEmpty()){
+            throw new GenreNotFoundException(genreId);
+        }
+        else{
+            return movieRepository.findByGenreId(genreId);
+        }
     }
 
     static Movie unwrapMovie(Optional<Movie> entity, long id){
