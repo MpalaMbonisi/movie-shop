@@ -18,7 +18,7 @@ public class MyListController {
 
     @PostMapping("/account/{accountId}/movie/{movieId}")
     public ResponseEntity<OrderedMovie> saveOrderedMovie(@PathVariable Long accountId, @PathVariable Long movieId){
-        return new ResponseEntity<>(orderedMovieService.saveOrderedMovie(accountId, movieId), HttpStatus.OK);
+        return new ResponseEntity<>(orderedMovieService.saveOrderedMovie(accountId, movieId), HttpStatus.CREATED);
     }
 
     @GetMapping("/account/{id}/all")
